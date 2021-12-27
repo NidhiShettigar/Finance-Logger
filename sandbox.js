@@ -58,6 +58,8 @@ ninja = {
     belt: 'black',
     age: 24
 };
+
+
 /*  is not possible
 ninja = {           
     name: 'ari',     
