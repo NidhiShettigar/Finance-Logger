@@ -128,7 +128,7 @@ ninjaTwo = {
     beltColor: 'green'
 }  // cannot add or remove any key value pair from the object initialized
 
-#6 */
+#6 
 
 // dynamic (any) type
 let age: any = 23;
@@ -154,3 +154,7 @@ console.log(ninja);
 
 ninja = { name:23 , age:'neeha' };
 console.log(ninja);
+
+#7
+*/
+console.log('test');

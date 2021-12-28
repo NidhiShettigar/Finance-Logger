@@ -1,3 +1,4 @@
+"use strict";
 /* #2
 const character = 'nobia';
 console.log(character);
@@ -128,22 +129,33 @@ ninjaTwo = {
     beltColor: 'green'
 }  // cannot add or remove any key value pair from the object initialized
 
-#6 */
+#6
+
 // dynamic (any) type
-var age = 23;
+let age: any = 23;
+
 age = true;
 console.log(age);
 age = 'hieeee';
 console.log(age);
-age = { name: 'herokee' };
+age = {name: 'herokee'};
 console.log(age);
-var mixed = [];
+
+let mixed: any[] = [];
+
 mixed.push(3);
 mixed.push('byeee');
 mixed.push(false);
 console.log(mixed);
-var ninja;
-ninja = { name: 'neeha', age: 23 };
+
+let ninja: {name: any, age: any };
+
+ninja = { name:'neeha' , age:23 };
 console.log(ninja);
-ninja = { name: 23, age: 'neeha' };
+
+ninja = { name:23 , age:'neeha' };
 console.log(ninja);
+
+#7
+*/
+console.log('test');
