@@ -224,7 +224,7 @@ let greet: (a:string, b:string ) => void;  //signature
 greet = (name:string, greeting:string ) =>  {
     console.log(`${name} say ${greeting}`);
 } 
-
+*/
 //example 2
 let cal: (a:number, d:number, f:string) => number;
 cal = (numOne:number, numTwo:number, action:string) => {
@@ -240,6 +240,5 @@ cal = (numOne:number, numTwo:number, action:string) => {
 let logDetails: (obj: {name:string, age:number}) => void;
 type person = {name:string, age:number};
 logDetails = (ninja: {name:string, age:number}) => {     //or (ninja: person)
-    console.log(`${name} is ${age} years old.`);
+    console.log(`${ninja.name} is ${ninja.age} years old.`);
 }
-*/

@@ -225,22 +225,20 @@ let greet: (a:string, b:string ) => void;  //signature
 greet = (name:string, greeting:string ) =>  {
     console.log(`${name} say ${greeting}`);
 }
-
+*/
 //example 2
-let cal: (a:number, d:number, f:string) => number;
-cal = (numOne:number, numTwo:number, action:string) => {
-    if(action === 'act'){
-        return numOne+numTwo;
-    } else {
-        return numOne-numTwo;
+let cal;
+cal = (numOne, numTwo, action) => {
+    if (action === 'act') {
+        return numOne + numTwo;
     }
-}
+    else {
+        return numOne - numTwo;
+    }
+};
 //note - if must have else because of number signature
-
 //example 3
-let logDetails: (obj: {name:string, age:number}) => void;
-type person = {name:string, age:number};
-logDetails = (ninja: {name:string, age:number}) => {     //or (ninja: person)
-    console.log(`${name} is ${age} years old.`);
-}
-*/ 
+let logDetails;
+logDetails = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old.`);
+};
