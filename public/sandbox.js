@@ -157,5 +157,43 @@ ninja = { name:23 , age:'neeha' };
 console.log(ninja);
 
 #7
-*/
 console.log('test');
+
+#8
+*/
+/*type 1
+let greet = () => {
+    console.log('hello, world');   //or
+}
+//greet = 'hello'; is not possible
+
+//type 2
+let greet: Function;
+greet = () => {
+    console.log('hello, world');   //or
+}
+
+const add = ( a:number, b:number ) => {
+    console.log(a+b);
+}
+add(2,78);
+//add('r',4); is not possible
+//add(5); is not possible
+
+const add = ( a:number, b:number, c?: string|number ) => {
+    console.log(a+b);
+    console.log(c);    // ans is undefined
+}
+add(2,78); //possible because of ? that is optional feild.
+*/
+const add = (a, b, c = 10) => {
+    console.log(a + b);
+    console.log(c); // ans is 10
+};
+add(2, 78);
+//note - default value and optional feild cannot be used at same time
+const minus = (a, b) => {
+    return a + b;
+};
+let result = minus(3, 1);
+//result = 'not'; is not possible   because its giving return value as number.
