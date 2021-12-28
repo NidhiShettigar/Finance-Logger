@@ -200,7 +200,7 @@ let result = minus(3,1);
 //result = 'not'; is not possible   because its giving return value as number.
 
 #9
-*/
+
 //type 1
 const logDetails = (uid: string|number, item:string) => {
     console.log(`${item} has a uid of ${uid}`);
@@ -217,5 +217,29 @@ const greet = (user:objWithName ) => {
     console.log(`${user.name} say hello`);
 }
 
+#10
+*/
 
+//example 1
+let greet: (a:string, b:string ) => void;  //signature
+greet = (name:string, greeting:string ) =>  {
+    console.log(`${name} say ${greeting}`);
+} 
 
+//example 2
+let cal: (a:number, d:number, f:string) => number;
+cal = (numOne:number, numTwo:number, action:string) => {
+    if(action === 'act'){
+        return numOne+numTwo;
+    } else {
+        return numOne-numTwo;
+    }
+}
+//note - if must have else because of number signature
+
+//example 3
+let logDetails: (obj: {name:string, age:number}) => void;
+type person = {name:string, age:number};
+logDetails = (ninja: {name:string, age:number}) => {     //or (ninja: person)
+    console.log(`${name} is ${age} years old.`);
+}
