@@ -218,7 +218,6 @@ const greet = (user:objWithName ) => {
 }
 
 #10
-*/
 
 //example 1
 let greet: (a:string, b:string ) => void;  //signature
@@ -243,3 +242,4 @@ type person = {name:string, age:number};
 logDetails = (ninja: {name:string, age:number}) => {     //or (ninja: person)
     console.log(`${name} is ${age} years old.`);
 }
+*/

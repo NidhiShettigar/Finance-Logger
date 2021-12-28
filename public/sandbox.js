@@ -219,25 +219,28 @@ const greet = (user:objWithName ) => {
 }
 
 #10
-*/
+
 //example 1
-let greet; //signature
-greet = (name, greeting) => {
+let greet: (a:string, b:string ) => void;  //signature
+greet = (name:string, greeting:string ) =>  {
     console.log(`${name} say ${greeting}`);
-};
+}
+
 //example 2
-let cal;
-cal = (numOne, numTwo, action) => {
-    if (action === 'act') {
-        return numOne + numTwo;
+let cal: (a:number, d:number, f:string) => number;
+cal = (numOne:number, numTwo:number, action:string) => {
+    if(action === 'act'){
+        return numOne+numTwo;
+    } else {
+        return numOne-numTwo;
     }
-    else {
-        return numOne - numTwo;
-    }
-};
+}
 //note - if must have else because of number signature
+
 //example 3
-let logDetails;
-logDetails = (ninja) => {
+let logDetails: (obj: {name:string, age:number}) => void;
+type person = {name:string, age:number};
+logDetails = (ninja: {name:string, age:number}) => {     //or (ninja: person)
     console.log(`${name} is ${age} years old.`);
-};
+}
+*/ 
