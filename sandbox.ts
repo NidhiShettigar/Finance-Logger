@@ -28,6 +28,8 @@ const circ = (diameter: number) => {
 
 console.log(circ(6.8));
 
+#4
+
 //arrays
 let names = ['uri', 'mona', 'seenu'];
 names.push('reena');
@@ -74,4 +76,54 @@ ninja = {
     belt: 'black',
     age: 89  
     skills: ['fight', 'skill'] nothing can be added other than name,belt,age.
-}; */
+}; 
+
+#5
+*/
+//explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
+//age = 'leena'; is not possible
+age = 20;
+//isLoggedIn = 25; is not possible
+isLoggedIn = true; //or false
+
+// arrays
+//let ninjas: string[]; // but to push elements this must be declared as below 
+let ninjas: string[] = [];
+//ninjas.push(67); is not possible
+ninjas.push('any-string'); 
+
+//union types
+//for mixed array 
+let mixed: (string|number|boolean)[] = [];
+mixed.push('hie');
+mixed.push(78);
+mixed.push(false);
+console.log(mixed);
+
+//for mixed variable 
+let uid: string|number;
+uid = '123';
+uid = 123;
+//uid = true; is not possible
+
+//objects
+let ninjaOne: object;
+ninjaOne = { name:'nids', age:21 };
+//ninjaOne = 'heeru'; is not possible
+
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColor: string
+}
+
+//ninjaTwo = {} is not possible
+ninjaTwo = {
+    name: 'deepa',
+    age: 32,
+    beltColor: 'green'
+}  // cannot add or remove any key value pair from the object initialized
