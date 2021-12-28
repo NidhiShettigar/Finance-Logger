@@ -79,7 +79,7 @@ ninja = {
 }; 
 
 #5
-*/
+
 //explicit types
 let character: string;
 let age: number;
@@ -127,3 +127,30 @@ ninjaTwo = {
     age: 32,
     beltColor: 'green'
 }  // cannot add or remove any key value pair from the object initialized
+
+#6 */
+
+// dynamic (any) type
+let age: any = 23;
+
+age = true;
+console.log(age);
+age = 'hieeee';
+console.log(age);
+age = {name: 'herokee'};
+console.log(age);
+
+let mixed: any[] = [];
+
+mixed.push(3);
+mixed.push('byeee');
+mixed.push(false);
+console.log(mixed);
+
+let ninja: {name: any, age: any };
+
+ninja = { name:'neeha' , age:23 };
+console.log(ninja);
+
+ninja = { name:23 , age:'neeha' };
+console.log(ninja);

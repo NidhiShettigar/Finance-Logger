@@ -79,40 +79,71 @@ ninja = {
 };
 
 #5
-*/
+
 //explicit types
-var character;
-var age;
-var isLoggedIn;
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
+
 //age = 'leena'; is not possible
 age = 20;
 //isLoggedIn = 25; is not possible
 isLoggedIn = true; //or false
+
 // arrays
-//let ninjas: string[]; // but to push elements this must be declared as below 
-var ninjas = [];
+//let ninjas: string[]; // but to push elements this must be declared as below
+let ninjas: string[] = [];
 //ninjas.push(67); is not possible
 ninjas.push('any-string');
+
 //union types
-//for mixed array 
-var mixed = [];
+//for mixed array
+let mixed: (string|number|boolean)[] = [];
 mixed.push('hie');
 mixed.push(78);
 mixed.push(false);
 console.log(mixed);
-//for mixed variable 
-var uid;
+
+//for mixed variable
+let uid: string|number;
 uid = '123';
 uid = 123;
 //uid = true; is not possible
+
 //objects
-var ninjaOne;
-ninjaOne = { name: 'nids', age: 21 };
+let ninjaOne: object;
+ninjaOne = { name:'nids', age:21 };
 //ninjaOne = 'heeru'; is not possible
-var ninjaTwo;
+
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColor: string
+}
+
 //ninjaTwo = {} is not possible
 ninjaTwo = {
     name: 'deepa',
     age: 32,
     beltColor: 'green'
-}; // cannot add or remove any key value pair from the object initialized
+}  // cannot add or remove any key value pair from the object initialized
+
+#6 */
+// dynamic (any) type
+var age = 23;
+age = true;
+console.log(age);
+age = 'hieeee';
+console.log(age);
+age = { name: 'herokee' };
+console.log(age);
+var mixed = [];
+mixed.push(3);
+mixed.push('byeee');
+mixed.push(false);
+console.log(mixed);
+var ninja;
+ninja = { name: 'neeha', age: 23 };
+console.log(ninja);
+ninja = { name: 23, age: 'neeha' };
+console.log(ninja);
